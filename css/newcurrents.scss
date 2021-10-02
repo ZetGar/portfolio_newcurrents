@@ -1,0 +1,310 @@
+body {
+  background-color: #333;
+}
+
+#wrap {
+  display: grid;
+  grid-template: repeat(5) / 1fr;
+}
+
+header {
+  position: fixed;
+  width: 100vw;
+  height: 70px;
+  background-color: #fff;
+
+  .hd_container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 99999;
+    width: 1080px;
+    height: 70px;
+    margin: 0 auto;
+    > h1.logo {
+      a {
+        display: block;
+        width: 200px;
+        height: 70px;
+        text-align: center;
+        text-indent: -9999px;
+        line-height: 70px;
+        background-position: center center;
+        background-image: url(./../images/logo_row.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+    }
+
+    div {
+      display: flex;
+      align-items: center;
+      height: 70px;
+
+      a {
+        display: block;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+      }
+    }
+
+    nav {
+      width: 50px;
+      height: 70px;
+      > a.hamber {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        margin: 10px 0;
+
+        &.on {
+          span {
+            background-color: transparent;
+            &::before {
+              transform: translateY(10px) rotate(45deg);
+            }
+            &::after {
+              transform: translateY(-10px) rotate(-45deg);
+            }
+          }
+        }
+
+        > span {
+          display: block;
+          width: 65%;
+          height: 3px;
+          margin: 0 auto;
+          background-color: #222;
+          transition: 0.5s;
+
+          &::before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 3px;
+            margin-top: -10px;
+            background-color: #222;
+            transition: 0.5s;
+          }
+
+          &::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 3px;
+            margin-top: 17px;
+            background-color: #222;
+            transition: 0.5s;
+          }
+        }
+      }
+
+      > .gnb {
+        position: absolute;
+        right: -100vw;
+        width: 250px;
+        height: 350px;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.7);
+
+        li {
+          &:nth-of-type(1) {
+            display: flex;
+            justify-content: right;
+
+            > a.mypage {
+              width: 60px;
+              padding: 30px 0;
+              color: #777;
+              font-size: 1.2rem;
+              text-align: right;
+              border-bottom: none;
+
+              &.mypage:hover {
+                color: #333;
+                font-weight: 600;
+                border-bottom: none;
+              }
+            }
+          }
+          a {
+            display: block;
+            width: 100%;
+            height: 5px;
+            padding: 20px;
+            font-size: 1.5rem;
+            font-weight: 600;
+            line-height: 0;
+            border-bottom: 2px solid rgb(83, 83, 83);
+            box-sizing: border-box;
+          }
+
+          &:hover {
+            a {
+              color: #692a81;
+              font-weight: 600;
+              border-bottom: 2px solid #692a81;
+            }
+          }
+
+          .lnb {
+            display: none;
+
+            li {
+              a {
+                display: block;
+                color: #222;
+                font-size: 1.3rem;
+                font-weight: 400;
+                line-height: 0;
+                border-bottom: none;
+                &:hover {
+                  color: #692a81;
+                  font-weight: 600;
+                  // background-color: #f0f0f0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+section.banner {
+  width: 100vw;
+  height: 600px;
+  padding-top: 70px;
+  background-color: #222;
+
+  .bn_container {
+    width: 1080px;
+    height: 500px;
+    margin: 0 auto;
+  }
+}
+
+section.contents {
+  width: 100vw;
+  height: 300px;
+
+  .ct_container {
+    display: flex;
+    justify-content: space-between;
+    width: 1080px;
+    height: 300px;
+    margin: 0 auto;
+    padding-top: 80px;
+    font-size: 1.7rem;
+
+    .ct_title {
+      width: 20%;
+
+      > h4 {
+        position: relative;
+        color: #222;
+        font-size: 1.4rem;
+        text-align: center;
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: calc(50% - 60px);
+          top: -7px;
+          z-index: -100;
+          display: block;
+          width: 120px;
+          height: 70px;
+          margin: 0 auto;
+          background-image: url(./../images/title.svg);
+          background-repeat: no-repeat;
+        }
+      }
+
+      > h2 {
+        color: #fff;
+        font-size: 4rem;
+        font-weight: 300;
+        text-align: center;
+        margin-top: 15px;
+      }
+
+      > a {
+        display: block;
+        margin-top: 30px;
+
+        color: #888;
+        font-size: 1.35rem;
+        text-align: center;
+        transition: 0.3s;
+
+        &:hover {
+          color: #62c0b4;
+          font-weight: 600;
+        }
+      }
+      > ul {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 50px;
+        > li > a {
+          display: block;
+          width: 58px;
+          height: 58px;
+
+          color: #888;
+          font-size: 1rem;
+          text-align: center;
+          line-height: 58px;
+
+          border: 1px solid #888;
+          border-radius: 50%;
+        }
+      }
+
+      > span {
+        display: block;
+        width: 230px;
+        height: 170px;
+        margin-top: 50px;
+        background-image: url(./../images/Prancheta1.svg);
+      }
+    }
+
+    // position: relative;
+    // overflow: hidden;
+
+    // width: 300px;
+    // height: 70px;
+    // margin: 0 auto;
+
+    // color: #222;
+    // font-size: 2.2rem;
+    // text-align: center;
+    // line-height: 70px;
+  }
+
+  .today {
+    width: 75%;
+    height: 500px;
+    // background-color: #62c0b4;
+  }
+
+  .flex {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 500px;
+
+    .to_box {
+      width: calc(100% / 3 - 20px);
+      height: 500px;
+      background-color: #fff;
+    }
+  }
+}

@@ -1,0 +1,291 @@
+body {
+  background-color: #333;
+}
+
+#wrap {
+  display: grid;
+  grid-template: repeat(5)/1fr;
+}
+
+header {
+  position: fixed;
+  width: 100vw;
+  height: 70px;
+  background-color: #fff;
+}
+
+header .hd_container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 99999;
+  width: 1080px;
+  height: 70px;
+  margin: 0 auto;
+}
+
+header .hd_container > h1.logo a {
+  display: block;
+  width: 200px;
+  height: 70px;
+  text-align: center;
+  text-indent: -9999px;
+  line-height: 70px;
+  background-position: center center;
+  background-image: url(./../images/logo_row.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+header .hd_container div {
+  display: flex;
+  align-items: center;
+  height: 70px;
+}
+
+header .hd_container div a {
+  display: block;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+}
+
+header .hd_container nav {
+  width: 50px;
+  height: 70px;
+}
+
+header .hd_container nav > a.hamber {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  margin: 10px 0;
+}
+
+header .hd_container nav > a.hamber.on span {
+  background-color: transparent;
+}
+
+header .hd_container nav > a.hamber.on span::before {
+  transform: translateY(10px) rotate(45deg);
+}
+
+header .hd_container nav > a.hamber.on span::after {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+header .hd_container nav > a.hamber > span {
+  display: block;
+  width: 65%;
+  height: 3px;
+  margin: 0 auto;
+  background-color: #222;
+  transition: 0.5s;
+}
+
+header .hd_container nav > a.hamber > span::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  margin-top: -10px;
+  background-color: #222;
+  transition: 0.5s;
+}
+
+header .hd_container nav > a.hamber > span::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  margin-top: 17px;
+  background-color: #222;
+  transition: 0.5s;
+}
+
+header .hd_container nav > .gnb {
+  position: absolute;
+  right: -100vw;
+  width: 250px;
+  height: 350px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+header .hd_container nav > .gnb li:nth-of-type(1) {
+  display: flex;
+  justify-content: right;
+}
+
+header .hd_container nav > .gnb li:nth-of-type(1) > a.mypage {
+  width: 60px;
+  padding: 30px 0;
+  color: #777;
+  font-size: 1.2rem;
+  text-align: right;
+  border-bottom: none;
+}
+
+header .hd_container nav > .gnb li:nth-of-type(1) > a.mypage.mypage:hover {
+  color: #333;
+  font-weight: 600;
+  border-bottom: none;
+}
+
+header .hd_container nav > .gnb li a {
+  display: block;
+  width: 100%;
+  height: 5px;
+  padding: 20px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 0;
+  border-bottom: 2px solid #535353;
+  box-sizing: border-box;
+}
+
+header .hd_container nav > .gnb li:hover a {
+  color: #692a81;
+  font-weight: 600;
+  border-bottom: 2px solid #692a81;
+}
+
+header .hd_container nav > .gnb li .lnb {
+  display: none;
+}
+
+header .hd_container nav > .gnb li .lnb li a {
+  display: block;
+  color: #222;
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 0;
+  border-bottom: none;
+}
+
+header .hd_container nav > .gnb li .lnb li a:hover {
+  color: #692a81;
+  font-weight: 600;
+}
+
+section.banner {
+  width: 100vw;
+  height: 600px;
+  padding-top: 70px;
+  background-color: #222;
+}
+
+section.banner .bn_container {
+  width: 1080px;
+  height: 500px;
+  margin: 0 auto;
+}
+
+section.contents {
+  width: 100vw;
+  height: 300px;
+}
+
+section.contents .ct_container {
+  display: flex;
+  justify-content: space-between;
+  width: 1080px;
+  height: 300px;
+  margin: 0 auto;
+  padding-top: 80px;
+  font-size: 1.7rem;
+}
+
+section.contents .ct_container .ct_title {
+  width: 20%;
+}
+
+section.contents .ct_container .ct_title > h4 {
+  position: relative;
+  color: #222;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+section.contents .ct_container .ct_title > h4::before {
+  content: "";
+  position: absolute;
+  left: calc(50% - 60px);
+  top: -7px;
+  z-index: -100;
+  display: block;
+  width: 120px;
+  height: 70px;
+  margin: 0 auto;
+  background-image: url(./../images/title.svg);
+  background-repeat: no-repeat;
+}
+
+section.contents .ct_container .ct_title > h2 {
+  color: #fff;
+  font-size: 4rem;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 15px;
+}
+
+section.contents .ct_container .ct_title > a {
+  display: block;
+  margin-top: 30px;
+  color: #888;
+  font-size: 1.35rem;
+  text-align: center;
+  transition: 0.3s;
+}
+
+section.contents .ct_container .ct_title > a:hover {
+  color: #62c0b4;
+  font-weight: 600;
+}
+
+section.contents .ct_container .ct_title > ul {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 50px;
+}
+
+section.contents .ct_container .ct_title > ul > li > a {
+  display: block;
+  width: 58px;
+  height: 58px;
+  color: #888;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 58px;
+  border: 1px solid #888;
+  border-radius: 50%;
+}
+
+section.contents .ct_container .ct_title > span {
+  display: block;
+  width: 230px;
+  height: 170px;
+  margin-top: 50px;
+  background-image: url(./../images/Prancheta1.svg);
+}
+
+section.contents .today {
+  width: 75%;
+  height: 500px;
+}
+
+section.contents .flex {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 500px;
+}
+
+section.contents .flex .to_box {
+  width: calc(100% / 3 - 20px);
+  height: 500px;
+  background-color: #fff;
+}

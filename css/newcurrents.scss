@@ -317,7 +317,7 @@ section.class {
 
     .cl_slide {
       width: calc(330px * 7 + 280px);
-      height: 580px;
+      height: 400px;
       justify-content: space-between;
 
       .cl_card {
@@ -376,19 +376,36 @@ section.class {
 }
 
 section.sns {
+  position: relative;
+
   height: 300px;
-  background-color: #692a81;
+  background-color: rgb(250, 210, 233);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 
   .container {
+    display: block;
+
+    > .sns_img {
+      position: absolute;
+      top: 0;
+      width: 1080px;
+      height: 300px;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-position: 800px center;
+      background-size: 23%;
+      background-image: url(./../images/sns_cellphone.svg);
+    }
     > h2 {
       margin-top: 70px;
+      color: #222;
       font-size: 4rem;
       text-align: left;
     }
     > p {
-      margin-top: 15px;
-      color: #fff;
-      font-size: 1.7rem;
+      margin-top: 25px;
+      color: #222;
+      font-size: 1.3rem;
       line-height: 1.5;
     }
   }
@@ -464,27 +481,31 @@ section.content_bar {
       height: 130px;
       padding: 15px;
       margin: 10px 10px;
-      border: 1px solid #2988d1;
+      border: 1px solid #9b20cc;
       border-radius: 10px;
       box-sizing: border-box;
       transition: 0.3s;
 
-      h4 {
-        margin-top: 80px;
-        color: #2988d1;
-        text-align: center;
-        font-weight: 600;
-        font-size: 1.3rem;
-      }
-
-      &:hover {
-        background-color: #0068b7;
-        border: none;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      a {
+        display: block;
 
         h4 {
-          color: #fff;
+          margin-top: 80px;
+          color: #9b20cc;
+          text-align: center;
           font-weight: 600;
+          font-size: 1.3rem;
+        }
+
+        &:hover {
+          background-color: #9b20cc;
+          border: none;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+
+          h4 {
+            color: #fff;
+            font-weight: 600;
+          }
         }
       }
     }

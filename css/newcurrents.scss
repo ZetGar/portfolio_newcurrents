@@ -375,6 +375,50 @@ section.class {
   }
 }
 
+section.sns {
+  height: 300px;
+  background-color: #692a81;
+
+  .container {
+    > h2 {
+      margin-top: 70px;
+      font-size: 4rem;
+      text-align: left;
+    }
+    > p {
+      margin-top: 15px;
+      color: #fff;
+      font-size: 1.7rem;
+      line-height: 1.5;
+    }
+  }
+}
+
+section.contents {
+  height: 800px;
+  margin-top: 120px;
+
+  .ct_container {
+    width: 1080px;
+    height: 500px;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+    .flex {
+      flex-wrap: wrap;
+      margin-top: 30px;
+
+      .card {
+        width: 330px;
+        height: 200px;
+        margin-top: 50px;
+        border: 1px solid #000;
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
 section.content_bar {
   height: 500px;
   // box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
@@ -420,21 +464,21 @@ section.content_bar {
       height: 130px;
       padding: 15px;
       margin: 10px 10px;
-      border: 1px solid #b267f3;
+      border: 1px solid #2988d1;
       border-radius: 10px;
       box-sizing: border-box;
       transition: 0.3s;
 
       h4 {
         margin-top: 80px;
-        color: #b267f3;
+        color: #2988d1;
         text-align: center;
         font-weight: 600;
         font-size: 1.3rem;
       }
 
       &:hover {
-        background-color: #8a41c9;
+        background-color: #0068b7;
         border: none;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 
@@ -453,58 +497,6 @@ section.content_bar {
           padding-bottom: 10px;
           border-bottom: 1px solid #fff;
         }
-      }
-    }
-  }
-}
-
-section.contents {
-  height: 800px;
-
-  .ct_container {
-    width: 1080px;
-    height: 500px;
-    margin: 0 auto;
-    box-sizing: border-box;
-
-    .flex {
-      flex-wrap: wrap;
-      margin-top: 30px;
-
-      .card {
-        width: 330px;
-        height: 200px;
-        margin-top: 50px;
-        border: 1px solid #000;
-        border-radius: 10px;
-      }
-    }
-  }
-}
-
-section.etc {
-  .etc_container {
-    width: 1080px;
-    height: 500px;
-    margin: 0 auto;
-
-    .flex {
-      .consulting {
-        width: 300px;
-        height: 400px;
-        border: 1px solid #000;
-      }
-
-      .test {
-        width: 300px;
-        height: 400px;
-        border: 1px solid #000;
-      }
-
-      .sns {
-        width: 300px;
-        height: 400px;
-        border: 1px solid #000;
       }
     }
   }

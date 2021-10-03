@@ -306,6 +306,7 @@ section.class .container .cl_slide .cl_card:hover .card_img {
   border-radius: 10px;
   box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5);
   box-sizing: border-box;
+  animation: scale 0.5s forwards;
 }
 
 section.class .container .cl_slide .cl_card .card_img {
@@ -314,6 +315,18 @@ section.class .container .cl_slide .cl_card .card_img {
   border-radius: 10px;
   background-size: cover;
   box-sizing: border-box;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 section.class .container .cl_slide .cl_card .card_body > h4 {
@@ -359,8 +372,8 @@ section.sns .container > .sns_img {
   height: 300px;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-position: 800px center;
-  background-size: 23%;
+  background-position: 70% center;
+  background-size: contain;
   background-image: url(./../images/sns_cellphone.svg);
 }
 
@@ -404,7 +417,7 @@ section.contents .ct_container .flex .card {
 }
 
 section.content_bar {
-  height: 500px;
+  height: 400px;
 }
 
 section.content_bar .container {

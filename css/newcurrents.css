@@ -24,6 +24,10 @@ a.btn {
   box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
+a.btn:hover {
+  background: linear-gradient(45deg, #7a1a86 0%, #00a7b3 100%);
+}
+
 .flex {
   display: flex;
   justify-content: space-between;
@@ -290,6 +294,8 @@ section.class .container .tit a.btn {
 }
 
 section.class .container .cl_slide {
+  position: relative;
+  left: 0;
   width: calc(330px * 7 + 280px);
   height: 400px;
   justify-content: space-between;

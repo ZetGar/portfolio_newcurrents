@@ -26,6 +26,17 @@ $(function () {
     $(this).children(".lnb").stop().slideUp(500);
   });
 
+  // 온라인 클래스
+  // 슬라이드 적용
+
+  setInterval(function () {
+    const $clSlide = $(".cl_slide");
+    $clSlide.stop().animate({ left: -370 }, function () {
+      $(".cl_slide>li").eq(0).appendTo($clSlide);
+      $clSlide.css({ left: 0 });
+    });
+  }, 2000);
+
   // scrollTop
   // const arrTopVal = [];
   // for (let i = 0; i < 5; i++) {
@@ -92,8 +103,4 @@ $(function () {
       .eq(i)
       .html("₩ " + online[i].price);
   }
-
-  const $clSlide = $(".cl_slide");
-
-  $clSlide.on("load", function () {});
 });

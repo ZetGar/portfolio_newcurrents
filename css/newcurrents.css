@@ -393,10 +393,6 @@ section.content_bar .container .work {
   justify-content: start;
 }
 
-section.content_bar .container .work .card :nth-of-type(3) {
-  margin-top: 50px;
-}
-
 section.content_bar .container .test > .card {
   align-items: center;
   width: 130px;

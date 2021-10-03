@@ -21,24 +21,16 @@ a.btn {
   line-height: 25px;
   font-weight: 600;
 
+  // background-color: #f1c74b;
+
   background: linear-gradient(
-    40deg,
+    45deg,
     rgba(164, 65, 177, 1) 0%,
     rgba(0, 174, 187, 1) 100%
   );
 
   border-radius: 40px;
   box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.5);
-}
-span {
-  position: absolute;
-  z-index: 1;
-
-  background: #000;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  border-radius: 50%;
-  animation: animate 1s linear infinite;
 }
 
 .flex {
@@ -379,8 +371,10 @@ section.sns {
   position: relative;
 
   height: 300px;
-  background-color: rgb(250, 210, 233);
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  // background-color: rgb(250, 210, 233);
+
+  background: linear-gradient(180deg, rgb(201, 24, 127) 0%, #ffb300 100%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
 
   .container {
     display: block;
@@ -397,15 +391,15 @@ section.sns {
       background-image: url(./../images/sns_cellphone.svg);
     }
     > h2 {
-      margin-top: 70px;
-      color: #222;
-      font-size: 4rem;
+      margin-top: 50px;
+      color: #fff;
+      font-size: 5rem;
       text-align: left;
     }
     > p {
       margin-top: 25px;
-      color: #222;
-      font-size: 1.3rem;
+      color: #fff;
+      font-size: 1.5rem;
       line-height: 1.5;
     }
   }
@@ -456,6 +450,7 @@ section.content_bar {
         width: 150px;
         margin: 10px;
         color: #fff;
+
         > h4 {
           font-size: 1.5rem;
         }
@@ -479,15 +474,18 @@ section.content_bar {
       align-items: center;
       width: 130px;
       height: 130px;
-      padding: 15px;
-      margin: 10px 10px;
-      border: 1px solid #9b20cc;
-      border-radius: 10px;
-      box-sizing: border-box;
-      transition: 0.3s;
-
+      margin: 5px 5px;
       a {
         display: block;
+
+        width: 130px;
+        height: 130px;
+        padding: 10px;
+
+        border: 1px solid #9b20cc;
+        border-radius: 10px;
+        box-sizing: border-box;
+        transition: 0.3s;
 
         h4 {
           margin-top: 80px;
@@ -524,15 +522,76 @@ section.content_bar {
 }
 
 footer {
-  height: 300px;
+  height: 230px;
   background-color: #3a3a3a;
+
+  h2.logo {
+    width: 230px;
+    height: 180px;
+    margin-top: -10px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(./../images/logo_row_w.png);
+  }
 
   .ft_container {
     width: 1080px;
-    height: 300px;
+    height: 230px;
     padding: 50px 0;
     margin: 0 auto;
 
+    color: #fff;
+
     box-sizing: border-box;
+
+    ul {
+      justify-content: start;
+
+      > li {
+        > a {
+          display: block;
+          height: 15px;
+          padding-right: 20px;
+          margin: 0 20px 20px 0;
+          color: #b8b8b8;
+          font-size: 1.2rem;
+          font-weight: 600;
+
+          border-right: 2px solid #b8b8b8;
+        }
+
+        &:last-of-type {
+          a {
+            border-right: none;
+          }
+        }
+
+        &:hover {
+          a {
+            color: #fff;
+          }
+        }
+      }
+    }
+
+    address {
+      color: #b8b8b8;
+      font-size: 1.2rem;
+      line-height: 2;
+    }
+
+    span {
+      padding-right: 20px;
+      margin-right: 20px;
+      border-right: 1px solid #b8b8b8;
+
+      color: #b8b8b8;
+      font-size: 1.2rem;
+      line-height: 2;
+
+      &:last-of-type {
+        border-right: none;
+      }
+    }
   }
 }

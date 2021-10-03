@@ -36,7 +36,7 @@ span {
 
 .flex {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .bg {
@@ -45,7 +45,13 @@ span {
   background-position: center center;
 }
 
+.container {
+  width: 1080px;
+  margin: 0 auto;
+}
+
 h2 {
+  color: #fff;
   font-size: 3.2rem;
   text-align: center;
 }
@@ -233,31 +239,32 @@ section.banner {
   background-color: #222;
 }
 
-section.banner .bn_container {
+section.banner .container {
   width: 1080px;
   height: 500px;
   margin: 0 auto;
 }
 
-section.class .cl_container {
+section.class .container {
   overflow: hidden;
   width: 1080px;
-  height: 650px;
+  height: 800px;
   margin: 0 auto;
 }
 
-section.class .cl_container .tit {
+section.class .container .tit {
   position: relative;
-  padding-top: 80px;
+  padding-top: 100px;
+  margin-bottom: 30px;
   color: #fff;
   text-align: center;
 }
 
-section.class .cl_container .tit > h2 {
+section.class .container .tit > h2 {
   text-align: left;
 }
 
-section.class .cl_container .tit > h2:after {
+section.class .container .tit > h2:after {
   content: "😎";
   display: inline-block;
   margin-left: 15px;
@@ -278,7 +285,7 @@ section.class .cl_container .tit > h2:after {
   }
 }
 
-section.class .cl_container .tit > p {
+section.class .container .tit > p {
   margin-top: 30px;
   width: 700px;
   font-size: 1.3rem;
@@ -286,32 +293,32 @@ section.class .cl_container .tit > p {
   text-align: left;
 }
 
-section.class .cl_container .tit a.btn {
+section.class .container .tit a.btn {
   position: absolute;
   right: 0;
-  top: 120px;
+  top: 150px;
 }
 
-section.class .cl_container .cl_slide {
-  width: calc(330px * 7 + 250px);
+section.class .container .cl_slide {
+  width: calc(330px * 7 + 280px);
   height: 580px;
   justify-content: space-between;
 }
 
-section.class .cl_container .cl_slide .cl_card {
+section.class .container .cl_slide .cl_card {
   display: block;
   width: 330px;
   height: 300px;
   margin: 50px auto 0;
 }
 
-section.class .cl_container .cl_slide .cl_card:hover .card_img {
+section.class .container .cl_slide .cl_card:hover .card_img {
   border-radius: 10px;
-  border: 2px solid #646464;
+  box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5);
   box-sizing: border-box;
 }
 
-section.class .cl_container .cl_slide .cl_card .card_img {
+section.class .container .cl_slide .cl_card .card_img {
   width: 330px;
   height: 200px;
   border-radius: 10px;
@@ -319,14 +326,14 @@ section.class .cl_container .cl_slide .cl_card .card_img {
   box-sizing: border-box;
 }
 
-section.class .cl_container .cl_slide .cl_card .card_body > h4 {
+section.class .container .cl_slide .cl_card .card_body > h4 {
   color: #fff;
   font-size: 1.7rem;
   line-height: 1.7;
   margin-top: 20px;
 }
 
-section.class .cl_container .cl_slide .cl_card .card_body .new::before {
+section.class .container .cl_slide .cl_card .card_body .new::before {
   content: "NEW";
   display: inline-block;
   padding: 3px 15px;
@@ -336,7 +343,7 @@ section.class .cl_container .cl_slide .cl_card .card_body .new::before {
   border-radius: 20px;
 }
 
-section.class .cl_container .cl_slide .cl_card .card_body > p {
+section.class .container .cl_slide .cl_card .card_body > p {
   display: inline-block;
   margin-top: 10px;
   color: #808080;
@@ -344,8 +351,95 @@ section.class .cl_container .cl_slide .cl_card .card_body > p {
   font-weight: 600;
 }
 
-section.contents {
+section.content_bar {
   height: 500px;
+}
+
+section.content_bar .container {
+  width: 1080px;
+}
+
+section.content_bar .container .flex {
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 400px;
+}
+
+section.content_bar .container .flex h2 {
+  text-align: left;
+}
+
+section.content_bar .container .flex .card {
+  width: 150px;
+  margin: 10px;
+  color: #fff;
+}
+
+section.content_bar .container .flex .card > h4 {
+  font-size: 1.5rem;
+}
+
+section.content_bar .container .flex .card > p {
+  color: #777;
+  font-weight: 500;
+  line-height: 2;
+}
+
+section.content_bar .container .flex .card > p:nth-of-type(1) {
+  margin-top: 20px;
+}
+
+section.content_bar .container .work {
+  justify-content: start;
+}
+
+section.content_bar .container .work .card :nth-of-type(3) {
+  margin-top: 50px;
+}
+
+section.content_bar .container .test > .card {
+  align-items: center;
+  width: 130px;
+  height: 130px;
+  padding: 15px;
+  margin: 10px 10px;
+  border: 1px solid #b267f3;
+  border-radius: 10px;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+
+section.content_bar .container .test > .card h4 {
+  margin-top: 80px;
+  color: #b267f3;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+section.content_bar .container .test > .card:hover {
+  background-color: #8a41c9;
+  border: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+section.content_bar .container .test > .card:hover h4 {
+  color: #fff;
+  font-weight: 600;
+}
+
+section.content_bar .container .review .card {
+  width: 300px;
+}
+
+section.content_bar .container .review .card > h4 {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #fff;
+}
+
+section.contents {
+  height: 800px;
 }
 
 section.contents .ct_container {
@@ -357,12 +451,13 @@ section.contents .ct_container {
 
 section.contents .ct_container .flex {
   flex-wrap: wrap;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 section.contents .ct_container .flex .card {
-  width: 300px;
+  width: 330px;
   height: 200px;
+  margin-top: 50px;
   border: 1px solid #000;
   border-radius: 10px;
 }

@@ -5,7 +5,7 @@ body {
 
 #wrap {
   display: grid;
-  grid-template: repeat(5)/1fr;
+  grid-template: repeat(7)/1fr;
 }
 
 a.btn {
@@ -28,7 +28,7 @@ a.btn:hover {
   background: linear-gradient(45deg, #7a1a86 0%, #00a7b3 100%);
 }
 
-.flex {
+.flex, section.class .container .cl_slide, section.content_bar .container, footer .ft_container {
   display: flex;
   justify-content: space-between;
 }
@@ -402,61 +402,126 @@ section.contents {
   margin-top: 120px;
 }
 
+section.contents > h2 {
+  margin-bottom: 80px;
+}
+
 section.contents .ct_container {
+  display: grid;
+  grid-template: repeat(3, auto)/repeat(3, 1fr);
+  gap: 15px;
   width: 1080px;
-  height: 500px;
+  height: 600px;
   margin: 0 auto;
   box-sizing: border-box;
 }
 
-section.contents .ct_container .flex {
-  flex-wrap: wrap;
-  margin-top: 30px;
+section.contents .ct_container .item {
+  display: block;
+  width: 100%;
+  height: 200px;
+  padding: 30px;
+  background-color: #fff;
+  box-sizing: border-box;
+  transition: 0.5s;
 }
 
-section.contents .ct_container .flex .card {
-  width: 330px;
-  height: 200px;
-  margin-top: 50px;
-  border: 1px solid #000;
-  border-radius: 10px;
+section.contents .ct_container .item h4 {
+  display: inline-block;
+  color: #f9cf58;
+  font-size: 1.3rem;
+  line-height: 2;
+  border-top: 2px solid #f9cf58;
+  text-indent: -9999px;
+}
+
+section.contents .ct_container .item > h3 {
+  margin-top: 10px;
+  color: #fff;
+  font-size: 3rem;
+  text-indent: -9999px;
+}
+
+section.contents .ct_container .item:hover {
+  transform: scale(0.95);
+}
+
+section.contents .ct_container .item:nth-of-type(1) {
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+  background-color: #10438f;
+}
+
+section.contents .ct_container .item:nth-of-type(2) {
+  background-color: #292929;
+  background-image: url(./../images/content2.png);
+}
+
+section.contents .ct_container .item:nth-of-type(3) {
+  background-color: #292929;
+  background-image: url(./../images/content3.png);
+}
+
+section.contents .ct_container .item:nth-of-type(4) {
+  grid-column: 3 / 4;
+  grid-row: 2 / 4;
+  background-color: #05857e;
+}
+
+section.contents .ct_container .item:nth-of-type(5) {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+  background-color: #721e1e;
+  background-image: url(./../images/content5.png);
+}
+
+section.contents .ct_container .item:nth-of-type(6) {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+  background-color: #292929;
+}
+
+section.contents .ct_container .item:nth-of-type(7) {
+  grid-column: 2 /3;
+  grid-row: 2 / 4;
+  background-color: #f9cf58;
 }
 
 section.content_bar {
-  height: 400px;
+  padding: 100px 0;
 }
 
 section.content_bar .container {
   width: 1080px;
 }
 
-section.content_bar .container .flex {
+section.content_bar .container .flex, section.content_bar section.class .container .cl_slide, section.class section.content_bar .container .cl_slide, section.content_bar .container .container, section.content_bar .container footer .ft_container, footer section.content_bar .container .ft_container {
   flex-wrap: wrap;
   justify-content: center;
   width: 400px;
 }
 
-section.content_bar .container .flex h2 {
+section.content_bar .container .flex h2, section.content_bar section.class .container .cl_slide h2, section.class section.content_bar .container .cl_slide h2, section.content_bar .container .container h2, section.content_bar .container footer .ft_container h2, footer section.content_bar .container .ft_container h2 {
   text-align: left;
 }
 
-section.content_bar .container .flex .card {
+section.content_bar .container .flex .card, section.content_bar section.class .container .cl_slide .card, section.class section.content_bar .container .cl_slide .card, section.content_bar .container .container .card, section.content_bar .container footer .ft_container .card, footer section.content_bar .container .ft_container .card {
   width: 150px;
   margin: 10px;
   color: #fff;
 }
 
-section.content_bar .container .flex .card > h4 {
+section.content_bar .container .flex .card > h4, section.content_bar section.class .container .cl_slide .card > h4, section.class section.content_bar .container .cl_slide .card > h4, section.content_bar .container .container .card > h4, section.content_bar .container footer .ft_container .card > h4, footer section.content_bar .container .ft_container .card > h4 {
   font-size: 1.5rem;
 }
 
-section.content_bar .container .flex .card > p {
+section.content_bar .container .flex .card > p, section.content_bar section.class .container .cl_slide .card > p, section.class section.content_bar .container .cl_slide .card > p, section.content_bar .container .container .card > p, section.content_bar .container footer .ft_container .card > p, footer section.content_bar .container .ft_container .card > p {
   color: #777;
   font-weight: 500;
   line-height: 2;
 }
 
-section.content_bar .container .flex .card > p:nth-of-type(1) {
+section.content_bar .container .flex .card > p:nth-of-type(1), section.content_bar section.class .container .cl_slide .card > p:nth-of-type(1), section.class section.content_bar .container .cl_slide .card > p:nth-of-type(1), section.content_bar .container .container .card > p:nth-of-type(1), section.content_bar .container footer .ft_container .card > p:nth-of-type(1), footer section.content_bar .container .ft_container .card > p:nth-of-type(1) {
   margin-top: 10px;
 }
 

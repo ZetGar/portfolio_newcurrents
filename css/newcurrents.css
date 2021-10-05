@@ -367,6 +367,16 @@ section.sns {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
 }
 
+section.sns > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100vw;
+  height: 300px;
+  background-image: url(./../images/파티클.png);
+}
+
 section.sns .container {
   display: block;
 }
@@ -374,6 +384,7 @@ section.sns .container {
 section.sns .container > .sns_img {
   position: absolute;
   top: 0;
+  z-index: 1;
   width: 1080px;
   height: 300px;
   background-attachment: fixed;

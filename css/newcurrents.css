@@ -667,9 +667,10 @@ section.content_bar .container .review .card {
 }
 
 section.content_bar .container .review .card > h4 {
+  color: #f9cf58;
   margin-bottom: 10px;
   padding-bottom: 10px;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #f9cf58;
 }
 
 footer {
